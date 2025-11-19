@@ -157,29 +157,78 @@ joblib.dump(best_model, 'best_xgboost(tuned).pkl')
 print("Đã lưu mô hình vào 'best_xgboost(tuned).pkl'")
 
 # =============================================================================
-# 6. GIẢI THÍCH MÔ HÌNH (SHAP ANALYSIS)
+# 6. GIẢI THÍCH MÔ HÌNH (SHAP ANALYSIS) - ĐÃ SỬA LỖI HIỂN THỊ & KÍCH THƯỚC
 # =============================================================================
 print("\n--- [BƯỚC 6] Phân tích SHAP (Explainability) ---")
 
-# Lấy mẫu dữ liệu Test để chạy SHAP
-# Lấy 100 mẫu ngẫu nhiên
+# 1. Lấy mẫu dữ liệu Test (100 mẫu)
+np.random.seed(42)
 indices = np.random.choice(X_test_w2v.shape[0], 100, replace=False)
 X_test_sample = X_test_w2v[indices]
 
-# Khởi tạo Explainer
+print(f"Kích thước mẫu SHAP: {X_test_sample.shape}")
+
+# 2. Tính toán SHAP Values
+print("Đang tính toán giá trị SHAP...")
 explainer = shap.TreeExplainer(best_model)
 shap_values = explainer.shap_values(X_test_sample)
 
-# 6.1. Summary Plot (Tổng quan tác động Feature)
-print("Đang vẽ Summary Plot...")
-plt.figure()
-shap.summary_plot(shap_values, X_test_sample, class_names=class_names, feature_names=[f"Dim_{i}" for i in range(W2V_SIZE)])
+# 3. XỬ LÝ CẤU TRÚC DỮ LIỆU SHAP (FIX LỖI QUAN TRỌNG)
+# Chuyển đổi mảng 3 chiều (nếu có) thành List các ma trận 2D
+processed_shap_values = []
+
+if isinstance(shap_values, list):
+    processed_shap_values = shap_values
+elif len(np.array(shap_values).shape) == 3:
+    # XGBoost mới thường trả về (Samples, Features, Classes) -> Cần tách ra từng lớp
+    num_classes = shap_values.shape[2]
+    processed_shap_values = [shap_values[:, :, i] for i in range(num_classes)]
+else:
+    processed_shap_values = [shap_values]
+
+# Cắt bỏ cột thừa (Bias column) nếu kích thước không khớp
+final_shap_values = []
+for sv in processed_shap_values:
+    if sv.shape[1] > W2V_SIZE:
+        # Cắt bỏ cột cuối cùng nếu số cột > 300
+        final_shap_values.append(sv[:, :W2V_SIZE])
+    else:
+        final_shap_values.append(sv)
+
+# 4. VẼ BIỂU ĐỒ BEESWARM (TÁC ĐỘNG CHI TIẾT TỪNG LỚP)
+print("Đang vẽ biểu đồ Beeswarm cho từng lớp...")
+display_class_names = [f"Class {name}" for name in class_names]
+
+for i, class_name in enumerate(display_class_names):
+    # Kiểm tra an toàn index
+    if i >= len(final_shap_values): break
+    
+    plt.figure(figsize=(10, 6))
+    shap.summary_plot(
+        final_shap_values[i], 
+        X_test_sample, 
+        feature_names=[f"Dim_{j}" for j in range(W2V_SIZE)],
+        max_display=15,
+        show=False # Quan trọng: Để plt.figure() hoạt động đúng
+    )
+    plt.title(f"SHAP Beeswarm: Tác động lên {class_name}", fontsize=14)
+    plt.tight_layout()
+    plt.show()
+
+# 5. VẼ BIỂU ĐỒ BAR PLOT (TẦM QUAN TRỌNG TỔNG THỂ)
+print("Đang vẽ biểu đồ Bar Plot tổng quan...")
+plt.figure(figsize=(10, 8))
+shap.summary_plot(
+    final_shap_values, 
+    X_test_sample, 
+    plot_type="bar", 
+    class_names=class_names,
+    feature_names=[f"Dim_{j}" for j in range(W2V_SIZE)],
+    max_display=15,
+    show=False
+)
+plt.title("SHAP Bar Plot: Tầm quan trọng trung bình của Features", fontsize=14)
+plt.tight_layout()
 plt.show()
 
-# 6.2. Bar Plot (Tầm quan trọng của Feature)
-print("Đang vẽ Bar Plot...")
-plt.figure()
-shap.summary_plot(shap_values, X_test_sample, plot_type="bar", class_names=class_names, feature_names=[f"Dim_{i}" for i in range(W2V_SIZE)])
-plt.show()
-
-print("\n✅ HOÀN TẤT TUNING")
+print("\n✅ HOÀN TẤT TUNING & SHAP ANALYSIS")
