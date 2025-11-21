@@ -1,62 +1,85 @@
 # 📘 Readee — AI Reading Assistant
 
-**Readee** là nền tảng trí tuệ nhân tạo hỗ trợ học tiếng Anh thông minh, được thiết kế nhằm giúp người học rèn luyện kỹ năng đọc – hiểu thông qua các **nội dung được tạo tự động, phù hợp với trình độ và sở thích cá nhân**.  
-Dự án hướng tới mục tiêu xây dựng **“cỗ máy tạo nội dung học tiếng Anh theo yêu cầu” (AI-driven English Content Engine)**, giúp người dùng tiếp cận ngôn ngữ theo cách tự nhiên và hiệu quả nhất.
+![Readee Banner](https://via.placeholder.com/1200x350?text=Readee+AI+Project+Banner) > **"Learning should adapt to you — not the other way around."**
+
+**Readee** là dự án nghiên cứu và phát triển (R&D) chiến lược của bộ phận AI tại **VOCA**, hướng tới việc xây dựng một nền tảng học tiếng Anh thông minh, cá nhân hóa hoàn toàn dựa trên dữ liệu.
+
+Dự án giải quyết "nỗi đau" cốt lõi của người tự học: **Thiếu nguồn tài liệu đọc hiểu vừa phù hợp với trình độ (CEFR), vừa hấp dẫn theo sở thích cá nhân.**
 
 ---
 
 ## 🎯 Tầm nhìn & Sứ mệnh
 
-Readee ra đời với niềm tin rằng **việc học ngôn ngữ phải linh hoạt, cá nhân hóa và dựa trên dữ liệu thực tế**.  
-Sứ mệnh của Readee là **biến việc đọc tiếng Anh trở nên gần gũi, hấp dẫn và đúng với khả năng của mỗi người học** – thay vì bắt buộc họ phải tuân theo lộ trình cứng nhắc của các ứng dụng học truyền thống.
+* **Tầm nhìn:** Xây dựng "cỗ máy tạo nội dung học tiếng Anh theo yêu cầu" (AI-driven English Content Engine), thay thế phương pháp học thụ động bằng trải nghiệm đọc chủ động.
+* **Sứ mệnh:** Ứng dụng triết lý **"Comprehensible Input"** (Tiếp thu dễ hiểu) để biến việc học ngôn ngữ trở nên tự nhiên, giảm áp lực và duy trì động lực học tập lâu dài.
 
 ---
 
-## 💡 Ý tưởng cốt lõi
+## 🚀 Tính năng Cốt lõi (Key Features)
 
-Trong khi phần lớn nền tảng học tiếng Anh hiện nay cung cấp **nội dung cố định**, Readee tạo ra **bài đọc “on-demand”** – nghĩa là mỗi người dùng sẽ nhận được nội dung:
-- Đúng **trình độ ngôn ngữ (CEFR)**;
-- Phù hợp **chủ đề yêu thích**;
-- Được **điều chỉnh tự động** dựa trên phản hồi và tiến bộ của họ.
+Hệ thống Readee vận hành dựa trên mô hình AI "2-trong-1":
 
-Nhờ đó, Readee giúp duy trì **động lực học lâu dài**, đồng thời cải thiện khả năng đọc – hiểu qua từng phiên học.
+### 1. 🧠 AI Phân loại (Classification Engine)
+Tự động đánh giá và gán nhãn độ khó văn bản theo chuẩn **CEFR (A1 - B2)**.
+* Giúp người học biết chính xác trình độ của tài liệu.
+* Hỗ trợ VOCA tự động hóa quy trình phân loại kho học liệu khổng lồ.
 
----
+### 2. ✍️ AI Tạo sinh (Generative Engine)
+Tự động viết ra các nội dung học tập mới (truyện ngắn, hội thoại) được "đo ni đóng giày" cho từng cá nhân.
+* **Input:** Trình độ (vd: B1) + Chủ đề (vd: Công nghệ).
+* **Output:** Một câu chuyện thú vị, đúng ngữ pháp, đúng từ vựng yêu cầu.
 
-## ⚙️ Cách Readee hoạt động
-
-Hệ thống của Readee vận hành qua ba tầng chính:
-1. **Phân tích độ khó văn bản (Text Complexity Analysis):**  
-   Đánh giá và gán cấp độ CEFR cho từng đoạn văn dựa trên đặc trưng từ vựng, ngữ pháp và cấu trúc câu.
-
-2. **Mô hình gợi ý nội dung (Personalized Content Recommendation):**  
-   Gợi ý bài đọc mới dựa trên chủ đề, mức độ và hành vi học tập trước đó của người dùng.
-
-3. **Sinh nội dung học (AI Content Generation):**  
-   Ứng dụng ngôn ngữ tự nhiên (NLP) để tạo bài đọc hoặc tóm tắt phù hợp với năng lực người học.
+### 3. 🎓 Hệ thống Bổ trợ (Interactive Learning)
+* **Quiz Generator:** Tự động tạo câu hỏi trắc nghiệm từ bài đọc.
+* **Smart Flashcards:** Trích xuất từ vựng khó trong bài để ôn tập ngay lập tức.
 
 ---
 
-## 🌟 Giá trị khác biệt
+## 🛠️ Thiết lập Công nghệ (Tech Stack)
 
-| Khía cạnh | Readee mang lại |
-|------------|-----------------|
-| **Cá nhân hóa toàn diện** | Mỗi người học có hành trình riêng – nội dung được tùy chỉnh theo trình độ và hứng thú. |
-| **Dựa trên dữ liệu học thực tế** | Mô hình liên tục cập nhật từ hành vi đọc của người dùng để cải thiện gợi ý. |
-| **Trải nghiệm học tự nhiên** | Người học tiếp cận tiếng Anh thông qua câu chuyện, tin tức và chủ đề yêu thích. |
-| **Khả năng mở rộng** | Dễ dàng tích hợp với các nền tảng học tập và ứng dụng AI giáo dục khác. |
+Dự án sử dụng các công nghệ tiên tiến trong Xử lý Ngôn ngữ Tự nhiên (NLP) và Học máy (ML):
 
----
-
-## 🔭 Tầm nhìn dài hạn
-
-Readee không chỉ là một công cụ học đọc, mà là bước đầu tiên trong hành trình **xây dựng hệ sinh thái học tiếng Anh cá nhân hóa bằng AI**.  
-Trong tương lai, Readee hướng tới:
-- Tích hợp **AI đọc – nói – hiểu ngữ cảnh** để hỗ trợ kỹ năng ngôn ngữ toàn diện;  
-- Xây dựng **nền tảng mở** cho giáo viên, học sinh và nhà xuất bản nội dung học tập;  
-- Trở thành **trợ lý học ngôn ngữ thông minh**, đồng hành cùng người học suốt quá trình phát triển kỹ năng tiếng Anh.
+| Hạng mục | Công nghệ sử dụng |
+| :--- | :--- |
+| **Ngôn ngữ** | ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python) |
+| **Xử lý Dữ liệu** | Pandas, NumPy, NLTK (Tokenization, Lemmatization) |
+| **Feature Engineering** | **Word2Vec** (Gensim), TF-IDF (Scikit-learn) |
+| **Mô hình AI** | **XGBoost**, Logistic Regression, Random Forest |
+| **Cân bằng Dữ liệu** | **SMOTE** (Imbalanced-learn) để xử lý mất cân bằng lớp |
+| **Giải thích AI (XAI)** | **SHAP** (Để giải thích quyết định của mô hình) |
+| **Ứng dụng Demo** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit) |
+| **Quản lý Code** | GitHub |
 
 ---
 
-> “Learning should adapt to you — not the other way around.”  
-> — *Readee Team, 2025*
+## 📈 Kết quả Kỹ thuật Nổi bật (Sprint 4 Status)
+
+Dự án đã hoàn thành giai đoạn **Proof of Concept (PoC)** với những kết quả khả quan trên tập dữ liệu kiểm thử (Test Set):
+
+* **Dữ liệu:** Xây dựng thành công bộ dữ liệu chuẩn hóa gồm **1,235 mẫu văn bản** đã được làm sạch và cân bằng (A1-B2).
+* **Hiệu suất Mô hình (XGBoost + Word2Vec + SMOTE):**
+    * **Độ chính xác (Accuracy):** ~76% (Chấp nhận đánh đổi để tăng độ phủ).
+    * **Recall lớp khó (B1):** Đạt **71%** (Cải thiện vượt bậc so với mức 37% của các mô hình cũ, giải quyết triệt để vấn đề bỏ sót bài học phù hợp).
+    * **Tốc độ phản hồi:** < 1 giây/request.
+
+---
+
+## 📂 Cấu trúc Dự án
+
+```bash
+Readee-Project/
+├── app/
+│   ├── app.py                 # Mã nguồn ứng dụng Demo Streamlit
+│   ├── models/                # Chứa file model (.pkl) và vectorizer
+│   └── utils/                 # Các hàm xử lý phụ trợ
+├── notebooks/
+│   ├── 1_EDA.ipynb            # Phân tích khám phá dữ liệu
+│   ├── 2_Preprocessing.ipynb  # Làm sạch và chuẩn hóa dữ liệu
+│   ├── 3_Baseline_Model.ipynb # Huấn luyện Logistic Regression
+│   └── 4_Final_Model.ipynb    # Tối ưu hóa XGBoost + SMOTE + Word2Vec
+├── data/
+│   ├── raw/                   # Dữ liệu thô
+│   └── processed/             # Dữ liệu đã làm sạch (Cleaned & Balanced)
+├── docs/                      # Tài liệu báo cáo, AI Canvas, Slide
+├── requirements.txt           # Danh sách thư viện
+└── README.md                  # File giới thiệu này
