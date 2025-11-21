@@ -1,6 +1,6 @@
 # 📘 Readee — AI Reading Assistant
 
-![Readee Banner](https://via.placeholder.com/1200x350?text=Readee+AI+Project+Banner) > **"Learning should adapt to you — not the other way around."**
+![Readee Banner]() > **"Learning should adapt to you — not the other way around."**
 
 **Readee** là dự án nghiên cứu và phát triển (R&D) chiến lược của bộ phận AI tại **VOCA**, hướng tới việc xây dựng một nền tảng học tiếng Anh thông minh, cá nhân hóa hoàn toàn dựa trên dữ liệu.
 
