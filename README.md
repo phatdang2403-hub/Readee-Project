@@ -41,6 +41,19 @@ Accuracy mô hình (XGBoost + Word2Vec + SMOTE): ~76%.
 Recall lớp khó B1: 71% (cải thiện lớn).
 Tốc độ dự đoán: < 1 giây/request.
 
+## 👥 Đội ngũ Phát triển (Group 5 – Readee Team)
+
+| # | Tên thành viên | Vai trò | Vai trò trong dự án |
+| :---: | :--- | :---: | :--- |
+| 1 | **Dương Minh Kha** | ![Leader](https://img.shields.io/badge/-Leader-red) | Điều phối; Technical Architect; Review chất lượng sản phẩm |
+| 2 | **Đỗ Liên Thịnh** | ![Member](https://img.shields.io/badge/-Member-success) | Data Engineer: Thu thập, làm sạch & chuẩn hóa dữ liệu |
+| 3 | **Huỳnh Đằng Phát** | ![Member](https://img.shields.io/badge/-Member-success) | AI Engineer: Training mô hình CEFR, Embedding, Classification |
+| 4 | **Lê Thanh Hằng** | ![Member](https://img.shields.io/badge/-Member-success) | Frontend App, UI/UX, giao diện Notion App |
+| 5 | **Trần Thị Khánh Linh** | ![Member](https://img.shields.io/badge/-Member-success) | Business Analyst: Use-case, user flow, giá trị sản phẩm |
+| 6 | **Bùi Lê Đức Đạt** | ![Member](https://img.shields.io/badge/-Member-success) | AI Pipeline + Evaluation: SHAP, đánh giá mô hình |
+| 7 | **Nguyễn Tuyết Minh** | ![Member](https://img.shields.io/badge/-Member-success) | Frontend App, UI/UX, giao diện Notion App |
+
+
 📂 Cấu trúc Dự án
 ```text
 Readee-Project/
@@ -60,17 +73,6 @@ Readee-Project/
 ├── requirements.txt
 └── README.md
 
-## 👥 Đội ngũ Phát triển (Group 5 – Readee Team)
-
-| # | Tên thành viên | Vai trò | Vai trò trong dự án |
-| :---: | :--- | :---: | :--- |
-| 1 | **Dương Minh Kha** | ![Leader](https://img.shields.io/badge/-Leader-red) | Điều phối; Technical Architect; Review chất lượng sản phẩm |
-| 2 | **Đỗ Liên Thịnh** | ![Member](https://img.shields.io/badge/-Member-success) | Data Engineer: Thu thập, làm sạch & chuẩn hóa dữ liệu |
-| 3 | **Huỳnh Đằng Phát** | ![Member](https://img.shields.io/badge/-Member-success) | AI Engineer: Training mô hình CEFR, Embedding, Classification |
-| 4 | **Lê Thanh Hằng** | ![Member](https://img.shields.io/badge/-Member-success) | Frontend App, UI/UX, giao diện Notion App |
-| 5 | **Trần Thị Khánh Linh** | ![Member](https://img.shields.io/badge/-Member-success) | Business Analyst: Use-case, user flow, giá trị sản phẩm |
-| 6 | **Bùi Lê Đức Đạt** | ![Member](https://img.shields.io/badge/-Member-success) | AI Pipeline + Evaluation: SHAP, đánh giá mô hình |
-| 7 | **Nguyễn Tuyết Minh** | ![Member](https://img.shields.io/badge/-Member-success) | Frontend App, UI/UX, giao diện Notion App |
 
 🏃 Hướng dẫn Chạy Demo
 1. Clone Project
