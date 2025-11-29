@@ -54,7 +54,7 @@ Tốc độ dự đoán: < 1 giây/request.
 | 7 | **Nguyễn Tuyết Minh** | Member  | Frontend App, UI/UX, giao diện Notion App                     |
 
 📂 Cấu trúc Dự án
-```text
+
 Readee-Project/
 ├── app/
 │   ├── app.py                 # Ứng dụng Demo Streamlit
