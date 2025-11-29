@@ -1,3 +1,4 @@
+```markdown
 📘 Readee — AI Reading Assistant
 
 "Learning should adapt to you — not the other way around."
@@ -11,46 +12,37 @@ Sứ mệnh: Ứng dụng triết lý Comprehensible Input để biến việc h
 
 🚀 Tính năng Cốt lõi
 1. 🧠 AI Phân loại (Classification Engine)
-
 Phân loại bài đọc theo chuẩn CEFR (A1–B2).
-
 Công nghệ: XGBoost + Word2Vec
-
 Ứng dụng: Tự động đánh giá độ khó văn bản.
 
 2. ✍️ AI Tạo sinh (Generative Engine)
-
 Sinh truyện ngắn/hội thoại theo trình độ + sở thích.
-
 Đầu ra tối ưu cho cá nhân hóa nội dung.
 
 3. 🎓 Hệ thống Bổ trợ (Interactive Learning)
-
 Quiz Generator
-
 Smart Flashcards
 
 🛠️ Tech Stack
-Ngôn ngữ & Thư viện chính
-Hạng mục	Công nghệ	Mục đích
-Ngôn ngữ lập trình	Python	Xây dựng mô hình & ứng dụng
-Xử lý dữ liệu	Pandas, NumPy, NLTK	Cleaning, Tokenization, Lemmatization
-Feature Engineering	Word2Vec (Gensim)	Biểu diễn ngữ nghĩa
-Mô hình AI	XGBoost, Scikit-learn	Phân loại CEFR
-Cân bằng dữ liệu	SMOTE	Giảm mất cân bằng lớp
-XAI	SHAP	Giải thích mô hình
-App Demo	Streamlit	Giao diện thử nghiệm
+| Hạng mục | Công nghệ | Mục đích |
+| :--- | :--- | :--- |
+| Ngôn ngữ lập trình | Python | Xây dựng mô hình & ứng dụng |
+| Xử lý dữ liệu | Pandas, NumPy, NLTK | Cleaning, Tokenization, Lemmatization |
+| Feature Engineering | Word2Vec (Gensim) | Biểu diễn ngữ nghĩa |
+| Mô hình AI | XGBoost, Scikit-learn | Phân loại CEFR |
+| Cân bằng dữ liệu | SMOTE | Giảm mất cân bằng lớp |
+| XAI | SHAP | Giải thích mô hình |
+| App Demo | Streamlit | Giao diện thử nghiệm |
+
 📈 Kết quả Kỹ thuật
-
 Dataset chuẩn hóa: 1.235 mẫu (A1–B2).
-
 Accuracy mô hình (XGBoost + Word2Vec + SMOTE): ~76%.
-
 Recall lớp khó B1: 71% (cải thiện lớn).
-
 Tốc độ dự đoán: < 1 giây/request.
 
 📂 Cấu trúc Dự án
+```text
 Readee-Project/
 ├── app/
 │   ├── app.py                 # Ứng dụng Demo Streamlit
@@ -68,23 +60,18 @@ Readee-Project/
 ├── requirements.txt
 └── README.md
 
-🗂️ Sản phẩm Nộp
-Mã	Sản phẩm	Mô tả
-1.4.1	Báo cáo PDF/DOCX	Theo format của Trường, trích dẫn APA/IEEE/Harvard
-1.4.2	Slide trình bày	PDF/PPT/PPTX
-1.4.3	Giao diện App	Prototype/Demo
-1.4.4	Tài liệu khác	Canvas, Brochure, Poster…
-1.4.5	Source Code	Toàn bộ mã nguồn dự án
-1.4.6	README	File mô tả dự án
-👥 Đội ngũ Phát triển (Group 5 – Readee Team)
-Thành viên	Vai trò	Trách nhiệm
-Kha	Project Leader	Quản lý dự án, định hướng kỹ thuật
-Thịnh	Data Engineer	ETL Pipeline, xử lý dữ liệu
-Đạt	AI Developer	Huấn luyện & tối ưu mô hình
-Phát	Technical Analyst	AI Canvas, XAI, phân tích kỹ thuật
-T. Minh	Resource Manager	Quản lý tài nguyên & tài liệu
-K. Linh	UI/UX & Comms	Thiết kế giao diện, truyền thông
-Hằng	Presenter	Điều phối thuyết trình & tiến độ
+## 👥 Đội ngũ Phát triển (Group 5 – Readee Team)
+
+| # | Tên thành viên | Vai trò | Vai trò trong dự án |
+| :---: | :--- | :---: | :--- |
+| 1 | **Dương Minh Kha** | ![Leader](https://img.shields.io/badge/-Leader-red) | Điều phối; Technical Architect; Review chất lượng sản phẩm |
+| 2 | **Đỗ Liên Thịnh** | ![Member](https://img.shields.io/badge/-Member-success) | Data Engineer: Thu thập, làm sạch & chuẩn hóa dữ liệu |
+| 3 | **Huỳnh Đằng Phát** | ![Member](https://img.shields.io/badge/-Member-success) | AI Engineer: Training mô hình CEFR, Embedding, Classification |
+| 4 | **Lê Thanh Hằng** | ![Member](https://img.shields.io/badge/-Member-success) | Frontend App, UI/UX, giao diện Notion App |
+| 5 | **Trần Thị Khánh Linh** | ![Member](https://img.shields.io/badge/-Member-success) | Business Analyst: Use-case, user flow, giá trị sản phẩm |
+| 6 | **Bùi Lê Đức Đạt** | ![Member](https://img.shields.io/badge/-Member-success) | AI Pipeline + Evaluation: SHAP, đánh giá mô hình |
+| 7 | **Nguyễn Tuyết Minh** | ![Member](https://img.shields.io/badge/-Member-success) | Frontend App, UI/UX, giao diện Notion App |
+
 🏃 Hướng dẫn Chạy Demo
 1. Clone Project
 git clone https://github.com/phatdang2403-hub/Readee-Project.git
@@ -104,10 +91,6 @@ pip install -r requirements.txt
 
 4. Chạy ứng dụng
 streamlit run app/app.py
-
-
-Truy cập tại:
-👉 http://localhost:8501
 
 🔗 Liên kết Dự án
 
